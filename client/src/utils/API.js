@@ -8,22 +8,22 @@ const API = {
 
     
     getBooks: function () {
-        return axios.get("/api/books");
+        return axios.get("./api/books");
     },
 
     
     getBook: function (id) {
-        return axios.get("/api/books/" + id);
+        return axios.get("./api/books/" + id);
     },
 
     
     saveBook: function (savedBooks) {
-        return axios.post("/api/books", savedBooks);
+        return axios.post("./api/books", savedBooks);
     },
 
     
     deleteBook: function (id) {
-        return axios.delete("/api/books/" + id);
+        return axios.delete("./api/books/" + id);
     }
 } 
 export default API;
