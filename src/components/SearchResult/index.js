@@ -1,42 +1,39 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid";
+import { Container, Row, Col } from "../Grid"
 import "./style.css";
 
-const SavedResult = props => {
+const SearchResult = props => {
   return (
     <Container>
-      <h3>Saved Books</h3>
-      {props.savedBooks.map(savedbook => {
+      <h3>Search Results</h3>
+      {props.books.map(book => {
         return (
-          <div>
-            <div className="card mb-2">
-              <div className="card-body">
-                <Row id={savedbook.title + "Card"} key={savedbook._id}>
-                  <Col size="2">
-                    <img src={savedbook.image} alt={savedbook.title} />
-                  </Col>
-                  <Col size="10" className="pl-2">
-                    <h3 className="bookTitle">{savedbook.title}</h3>
-                    <h4 className="bookAuthor">{savedbook.authors}</h4>
-                    <p className="bookDescription pr-3">{savedbook.description}</p>
-                  </Col>
-                </Row>
-                <Row>
-                  <button className="delete btn mt-4 ml-3 mr-1" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
-                    Delete Book</button>
-                  <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
-                    <button className="view btn mt-4">
-                      View Book</button>
-                  </a>
-                </Row>
-              </div>
+          <div className="card mb-5">
+            <div className="card-body">
+              <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
+                <Col size="2">
+                  <img src={book.image} alt={book.title} />
+                </Col>
+                <Col size="10" className="pl-2">
+                  <h3 className="bookTitle">{book.title}</h3>
+                  <h4 className="bookAuthor">{book.authors}</h4>
+                  <p className="bookDescription pr-3">{book.description}</p>
+                </Col>
+              </Row>
+              <Row>
+                <button className="save btn mt-4 ml-3 mr-1" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
+                  Save Book</button>             
+                <a href={book.link} target="_blank" rel="noopener noreferrer">
+                  <button className="view btn mt-4">
+                    View Book</button>                 
+                </a>
+              </Row>
             </div>
           </div>
+
         );
-      })
-      }
+      })}
     </Container>
   )
 }
-
-export default SavedResult;
+export default SearchResult;
