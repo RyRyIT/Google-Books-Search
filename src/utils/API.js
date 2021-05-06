@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export default {
+const API = {
     
     getGoogleSearchBooks: function(query) {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query)
@@ -25,4 +25,5 @@ export default {
     deleteBook: function (id) {
         return axios.delete("/api/books/" + id);
     }
-}
+} 
+export default API;
