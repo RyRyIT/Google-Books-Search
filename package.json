@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": " React based Google Book Search Application",
   "main": "server.js",
-  "private": true, 
+  "private": true,
   "engines": {
     "npm": "7.6.0",
-    "node": "14.15.4" 
+    "node": "14.15.4"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -16,6 +16,7 @@
     "bootstrap": "^5.0.0",
     "concurrently": "^6.0.2",
     "if-env": "^1.0.4",
+    "node": "^16.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
