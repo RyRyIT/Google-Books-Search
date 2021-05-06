@@ -2,7 +2,7 @@
 This React based app can search for books save books that you might want to read and allow you to read the booke synopsis. 
 
 ## Technologies Used 
-*React
+* React
 **HTML
 **CSS 
 **Javascript 
