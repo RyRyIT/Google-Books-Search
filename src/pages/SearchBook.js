@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import SearchForm from "../components/SearchForm";
-import SearchResult from "../components/SearchResult"
+import SearchResult from "../components/SearchResults"
 
 
 class SearchBooks extends Component {
